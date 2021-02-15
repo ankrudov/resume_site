@@ -1,0 +1,166 @@
+/* Start global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    color: #dbdbdb ;
+}
+/*End global*/
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/dark_2.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+a{
+    width: 50%;
+    height: 50%;
+    text-decoration: none;
+    color: #00f7ff;
+}
+
+p{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+img{
+    width: 40%;
+    height:70vh;
+}
+/*End global*/
+
+header{
+    width: 100%;
+    height: 100vh;
+    
+    
+}
+
+#menutoggle
+{
+    display: block;
+    position: initial;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menutoggle a
+{
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+}
+
+#menutoggle a:hover
+{
+    color: tomato;
+}
+
+#menutoggle input
+{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+
+    -webkit-touch-callout: none;
+}
+
+#menutoggle span
+{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background:linear-gradient(to right, blue, yellow);
+    border-radius: 3px;
+
+    z-index: 1;
+    transform-origin: 4px 0px;
+  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#menutoggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menutoggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menutoggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: rgb(139, 139, 241), rgb(214, 214, 169);
+}
+
+#menutoggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menutoggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #6f43c2;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menutoggle input:checked ~ ul
+{
+  transform: none;
+}

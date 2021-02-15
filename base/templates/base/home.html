@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Andre Vasquez Resume-site</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    </head>
+    <body>
+        <header>
+            <!--list of items-->
+            <nav role="navigation">
+                <div id='menutoggle'>
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="#home"><li>Home</li></a>
+                        <a href="#about"><li>About Me</li></a>
+                        <a href="#socials"><li>Social Media</li></a>
+                        <a href="#services"><li>Services</li></a>
+                        <a href="#experience"><li>Experience</li></a>
+                        <a href="#contact"><li>Contact me</li></a>
+                        <a href="https://erikterwan.com/" target="_blank"><li>My full resume</li></a>
+                    </ul>
+                </div>
+            </nav>
+        {% block content %}
+            <div class="landing-text">
+                <h1 style="text-align:center">Andre Vasquez</h1>
+                <h2 style="text-align:center">Logistics Coordinator</h2>
+                <h3 style="text-align:center"> Web developer </h3>
+                 <div class="profile-img">
+                    <br><br><br><br><br><br><br>
+                    <img src="{% static 'images/my_pic.jpg' %}" >
+                </div>
+            </div>
+        </header>
+        <section class="about" id="about">
+            <div class"container">
+                <div class="about details"></div>
+                    <div class="about-heading">
+                        <h1>Who am i?</h1>
+                        <h4>Get to know me <h4>
+                    </div>
+                    <p>2006 time magazine person of the year and travel enthusiast with  17/50 states and 3 countries under his belt, My personal life goal is to visit every world wonder!.
+                    <br>
+                    Data manipulation and coding are my secret passions and I strive to streamline processes using tools such as excel, python and SQL  to improve everyday work-flows.
+                    <br>
+                    Assisting a team to work in better ways provides me with great pride.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <br>
+        {% endblock %}
+        <br><br>
+        <section>
+            <div class"social-media" id="socials">
+                    <h3>Check out the socials! </h3>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/home" class="fa fa-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/feed/" class="fa fa-linkedin"></a>
+                        </li>
+                         <li>
+                            <a href="https://www.glassdoor.com/member/profile/index.htm?profileOrigin=MEMBER_HOME">Glassdoor 🥃🚪</a>
+                        </li>
+                          <li>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Want more details? Check out my resume!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <br><br><br>
+        <footer class="copyright" >
+            <div class="up" id="up">
+                <i class="fas fa-chevron-up"> </i>
+                <p style="text-align:left">&copy: 2020 Andre Vasquez</p>
+            </div>
+        </footer>
+    </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>       
+    </body>
+</html>
