@@ -8,5 +8,4 @@ def home(request):
 def services(request):
     return render(request,'base/Services.html')
 
-def contact(request):
-    return render(request,'base/contact.html')
+

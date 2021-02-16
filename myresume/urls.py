@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls), 
     path('',include('base.urls')), #this links the base urls created in the base folder
     path('services',include('base.urls')),
-    path('contact',include('base.urls')),
+    path('contact',include('contact_form.urls')),
 ]
