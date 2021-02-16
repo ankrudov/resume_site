@@ -26,7 +26,7 @@ a{
     width: 50%;
     height: 50%;
     text-decoration: none;
-    color: #00f7ff;
+    color: #e0eb52;
 }
 
 p{
@@ -143,7 +143,7 @@ header{
   padding: 50px;
   padding-top: 125px;
   
-  background: #6f43c2;
+  background: #424144;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
