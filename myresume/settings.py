@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4i!vg5jwt@(m1t!(k+&z0qlmh!%4z*d(m&lmkv6$l+34*4_1_3'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG',cast=bool, default=True)
 
 ALLOWED_HOSTS = []
 
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'myresume.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': (BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -133,4 +134,9 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #email settings 
-EMAIL_HOST = 'localhost'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = 'Saukaafuu1!'
+#security layers TLS and ssl
+EMAIL_USE_TLS = True
