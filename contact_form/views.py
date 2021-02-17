@@ -17,7 +17,7 @@ def contact(request):
             message_subject, #subject
             message_text, #message
             message_email, #from email
-            ['andre.vasquez.14@gmail.com', 'lpakaco@gmail.com'], #to email 
+            ['andre.vasquez.14@gmail.com'], #to email 
             )
 
         return render(request,'contact_form/contact.html',{'message_name': message_name})
